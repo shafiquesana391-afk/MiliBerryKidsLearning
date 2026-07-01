@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Colors Memory Game</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,120px);
+gap:20px;
+justify-content:center;
+margin-top:30px;
+}
+
+.card{
+height:120px;
+border-radius:20px;
+cursor:pointer;
+box-shadow:0 0 15px gray;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.1);
+}
+
+.red{background:red;}
+.blue{background:blue;}
+.green{background:green;}
+.yellow{background:yellow;}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🎨 Colors Memory Game</h1>
+
+<h2>Find the Red Color ❤️</h2>
+
+<div class="grid">
+
+<div class="card red" onclick="colorGame('red')"></div>
+
+<div class="card blue" onclick="colorGame('blue')"></div>
+
+<div class="card green" onclick="colorGame('green')"></div>
+
+<div class="card yellow" onclick="colorGame('yellow')"></div>
+
+</div>
+
+<h2 id="colorResult"></h2>
+
+<br>
+
+<button onclick="window.location.href='memory.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

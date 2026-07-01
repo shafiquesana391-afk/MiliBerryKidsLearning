@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MiliBerry Kids Learning</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Sky Background -->
+<div class="sky">
+
+<div class="sun">☀️</div>
+
+<div class="cloud cloud1">☁️</div>
+<div class="cloud cloud2">☁️</div>
+
+<div class="star star1">⭐</div>
+<div class="star star2">⭐</div>
+<div class="star star3">⭐</div>
+
+<div class="balloon balloon1">🎈</div>
+<div class="balloon balloon2">🎈</div>
+
+<div class="rainbow">🌈</div>
+
+</div>
+
+<!-- Home -->
+<div class="home">
+
+<!-- Logo -->
+<div class="header">
+
+<h1>MiliBerry Kids Learning</h1>
+
+</div>
+
+<h2>🌈 Welcome</h2>
+
+<h2 id="username"></h2>
+
+<h1 id="avatar"></h1>
+
+<p>Let's Learn English With Fun!</p>
+
+<button id="musicBtn" onclick="playMusic()">
+🎵 Play Music
+</button>
+
+<br><br>
+
+<button onclick="window.location.href='abc.html'">
+🔤 Learn ABC
+</button>
+
+<button onclick="window.location.href='numbers.html'">
+🔢 Numbers
+</button>
+
+<button onclick="window.location.href='colors.html'">
+🎨 Colors
+</button>
+
+<button onclick="window.location.href='animals.html'">
+🐶 Animals
+</button>
+
+<button onclick="window.location.href='fruits.html'">
+🍎 Fruits
+</button>
+
+<button onclick="window.location.href='vegetables.html'">
+🥕 Vegetables
+</button>
+
+<button onclick="window.location.href='englishwords.html'">
+📖 English Words
+</button>
+
+<button onclick="window.location.href='rhymes.html'">
+🎵 Rhymes
+</button>
+
+<button onclick="window.location.href='games.html'">
+🎮 Games
+</button>
+
+<button onclick="window.location.href='memory.html'">
+🧠 Memory Game
+</button>
+
+<button onclick="window.location.href='quiz.html'">
+📝 Quiz
+</button>
+
+
+<button onclick="window.location.href='balloon.html'">
+🎈 Balloon Pop
+</button>
+
+<button onclick="resetBalloonGame()">
+🔄 Play Again
+</button>
+
+<button onclick="window.location.href='dragdrop.html'">
+🎯 Drag & Drop
+</button>
+
+
+
+
+
+<button onclick="window.location.href='certificate.html'">
+🏆 Certificate
+</button>
+
+<button onclick="toggleTheme()">
+🌙 / ☀️ Dark Mode
+</button>
+
+<button onclick="window.location.href='videos.html'">
+📺 YouTube Videos
+</button>
+
+<button onclick="window.location.href='contact.html'">
+📞 Contact
+</button>
+
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+<source src="Audio/background.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+<script>
+
+document.getElementById("username").innerHTML =
+localStorage.getItem("childName");
+
+document.getElementById("avatar").innerHTML =
+localStorage.getItem("avatar") || "🐻";
+
+</script>
+
+</body>
+
+</html>
+<div class="menu">
+
+
+<button onclick="window.location.href='birds.html'">🐦<br>Birds</button>
+
+<button onclick="window.location.href='vehicles.html'">🚗<br>Vehicles</button>
+
+<button onclick="window.location.href='shapes.html'">🔺<br>Shapes</button>
+
+<button onclick="window.location.href='bodyparts.html'">🧍<br>Body Parts</button>
+
+
+<button onclick="window.location.href='tracing.html'">✍️<br>Tracing Sheets</button>
+
+
+
+<button onclick="window.location.href='certificate.html'">🏆<br>Certificate</button>
+
+</di

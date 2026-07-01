@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag Apple to A</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.item{
+font-size:80px;
+width:100px;
+margin:30px auto;
+cursor:grab;
+}
+
+.box{
+width:150px;
+height:150px;
+border:4px dashed #ff69b4;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
+margin:30px auto;
+background:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🍎 Drag Apple to A</h1>
+
+<p>Drag the Apple into the A Box</p>
+
+<div id="apple"
+class="item"
+draggable="true"
+ondragstart="drag(event)">
+🍎
+</div>
+
+<div id="boxA"
+class="box"
+ondrop="dropApple(event)"
+ondragover="allowDrop(event)">
+A
+</div>
+
+<h2 id="result"></h2>
+
+<br>
+
+<button onclick="window.location.href='dragdrop.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

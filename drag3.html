@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Drag Red Color</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.item{
+width:100px;
+height:100px;
+background:red;
+border-radius:20px;
+margin:30px auto;
+cursor:grab;
+}
+
+.box{
+width:150px;
+height:150px;
+border:4px dashed red;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:30px auto;
+font-size:25px;
+background:#fff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🎨 Drag Red Color</h1>
+
+<p>Drag the Red Color into the Red Box</p>
+
+<div id="red"
+class="item"
+draggable="true"
+ondragstart="drag(event)">
+</div>
+
+<div id="redBox"
+class="box"
+ondrop="dropRed(event)"
+ondragover="allowDrop(event)">
+
+RED
+
+</div>
+
+<h2 id="redResult"></h2>
+
+<br>
+
+<button onclick="window.location.href='dragdrop.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

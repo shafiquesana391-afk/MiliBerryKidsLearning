@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ABC Memory Game</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,120px);
+gap:20px;
+justify-content:center;
+margin-top:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+font-size:70px;
+padding:20px;
+cursor:pointer;
+box-shadow:0 0 15px gray;
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:scale(1.1);
+background:#E3F2FD;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🔤 ABC Memory Game</h1>
+
+<h2>Find the Letter A</h2>
+
+<div class="grid">
+
+<div class="card" onclick="abcGame('A')">A</div>
+
+<div class="card" onclick="abcGame('B')">B</div>
+
+<div class="card" onclick="abcGame('C')">C</div>
+
+<div class="card" onclick="abcGame('D')">D</div>
+
+</div>
+
+<h2 id="abcResult"></h2>
+
+<br>
+
+<button onclick="window.location.href='memory.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

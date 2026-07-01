@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ABC Tracing</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+canvas{
+
+border:4px dashed #ff9800;
+border-radius:20px;
+background:#fff;
+touch-action:none;
+
+}
+
+.traceLetter{
+
+font-size:120px;
+font-weight:bold;
+color:#dddddd;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>✍️ ABC Tracing</h1>
+
+<div class="traceLetter" id="traceLetter">
+A
+</div>
+
+<canvas id="canvas" width="320" height="320"></canvas>
+
+<br><br>
+
+<button onclick="clearCanvas()">
+🗑️ Clear
+</button>
+
+<button onclick="speakTraceLetter()">
+🔊 Listen
+</button>
+
+<button onclick="nextTraceLetter()">
+➡ Next
+</button>
+
+<br><br>
+
+<button onclick="window.location.href='tracing.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<progress id="traceProgress" value="1" max="26"></progress>
+
+<p>
+Letter <span id="traceCount">1</span> / 26
+</p>

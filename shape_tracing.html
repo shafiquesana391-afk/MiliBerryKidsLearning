@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shape Tracing</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+canvas{
+border:4px dashed #ff9800;
+border-radius:20px;
+background:white;
+touch-action:none;
+}
+
+.traceShape{
+font-size:80px;
+font-weight:bold;
+color:#ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🔺 Shape Tracing</h1>
+
+<progress id="shapeProgress" value="1" max="10"></progress>
+
+<p>Shape <span id="shapeCount">1</span>/10</p>
+
+<div id="traceShape" class="traceShape">
+⭕
+</div>
+
+<h2 id="shapeName">Circle</h2>
+
+<canvas id="shapeCanvas" width="320" height="320"></canvas>
+
+<br><br>
+
+<button onclick="clearShapeCanvas()">🗑️ Clear</button>
+
+<button onclick="speakTraceShape()">🔊 Listen</button>
+
+<button onclick="nextTraceShape()">➡ Next</button>
+
+<br><br>
+
+<button onclick="window.location.href='tracing.html'">
+🏠 Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

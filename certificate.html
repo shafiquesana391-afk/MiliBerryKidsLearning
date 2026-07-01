@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Certificate</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+
+#certificate{
+
+width:900px;
+max-width:95%;
+margin:auto;
+padding:30px;
+background:white;
+border:10px solid gold;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px gray;
+
+}
+
+#certificate h1{
+
+color:#ff9800;
+
+}
+
+#certificate h2{
+
+color:#009688;
+
+}
+
+button{
+
+margin:10px;
+padding:15px 25px;
+font-size:18px;
+border:none;
+border-radius:15px;
+background:#ff9800;
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="certificate">
+
+<h1>🏆 MiliBerry Kids Learning</h1>
+
+<h2>Certificate of Achievement</h2>
+
+<p>This Certificate is Proudly Presented To</p>
+
+<h2 id="childName"></h2>
+
+<p>For Successfully Completing Learning Activities</p>
+
+<h3>⭐ Stars :
+<span id="stars"></span></h3>
+
+<h3>🪙 Coins :
+<span id="coins"></span></h3>
+
+<h3>🏅 Badges :
+<span id="badges"></span></h3>
+
+<h3>📅 Date :
+<span id="date"></span></h3>
+
+<h2>🎉 Congratulations! 🎉</h2>
+
+</div>
+
+<br>
+
+<center>
+
+<button onclick="downloadPDF()">
+
+📥 Download PDF
+
+</button>
+
+<button onclick="window.print()">
+
+🖨 Print
+
+</button>
+
+<button onclick="window.location.href='home.html'">
+
+🏠 Home
+
+</button>
+
+</center>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

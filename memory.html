@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memory Game</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,150px);
+
+gap:15px;
+
+justify-content:center;
+
+margin-top:30px;
+
+}
+
+.card{
+
+font-size:70px;
+
+padding:20px;
+
+background:white;
+
+border-radius:20px;
+
+cursor:pointer;
+
+box-shadow:0 0 10px gray;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🧠 Memory Game</h1>
+
+<p>Find the Apple 🍎</p>
+
+<div class="grid">
+
+<div class="card" onclick="memoryGame('🍎')">🍎</div>
+
+<div class="card" onclick="memoryGame('🐱')">🐱</div>
+
+<div class="card" onclick="memoryGame('⚽')">⚽</div>
+
+<div class="card" onclick="memoryGame('🐶')">🐶</div>
+
+</div>
+
+<h2 id="memoryResult"></h2>
+
+<br>
+
+<button onclick="window.location.href='home.html'">
+🏠 Home
+</button>
+
+<button onclick="window.location.href='memory1.html'">
+🍎 Fruits Memory
+</button>
+
+<button onclick="window.location.href='memory2.html'">
+🐶 Animals Memory
+</button>
+
+<button onclick="window.location.href='memory3.html'">
+🎨 Colors Memory
+</button>
+
+<button onclick="window.location.href='memory4.html'">
+🔤 ABC Memory
+</button>
+
+<button onclick="window.location.href='memory5.html'">
+🔢 Numbers Memory
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

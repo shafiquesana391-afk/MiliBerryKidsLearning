@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Word Tracing</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+canvas{
+border:4px dashed #ff9800;
+border-radius:20px;
+background:white;
+touch-action:none;
+}
+
+.traceWord{
+font-size:60px;
+font-weight:bold;
+color:#ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>📖 Word Tracing</h1>
+
+<progress id="wordProgress" value="1" max="20"></progress>
+
+<p>Word <span id="wordCount">1</span>/20</p>
+
+<div id="traceWord" class="traceWord">
+Apple
+</div>
+
+<canvas id="wordCanvas" width="320" height="320"></canvas>
+
+<br><br>
+
+<button onclick="clearWordCanvas()">🗑️ Clear</button>
+
+<button onclick="speakTraceWord()">🔊 Listen</button>
+
+<button onclick="nextTraceWord()">➡ Next</button>
+
+<br><br>
+
+<button onclick="window.location.href='tracing.html'">
+🏠 Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

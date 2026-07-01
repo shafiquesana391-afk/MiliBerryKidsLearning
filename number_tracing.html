@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Number Tracing</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+canvas{
+
+border:4px dashed #ff9800;
+border-radius:20px;
+background:white;
+touch-action:none;
+
+}
+
+.traceNumber{
+
+font-size:120px;
+font-weight:bold;
+color:#ddd;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🔢 Number Tracing</h1>
+
+<progress id="numberProgress" value="1" max="50"></progress>
+
+<p>Number <span id="numberCount">1</span>/50</p>
+
+<div id="traceNumber" class="traceNumber">1</div>
+
+<canvas id="numberCanvas" width="320" height="320"></canvas>
+
+<br><br>
+
+<button onclick="clearNumberCanvas()">🗑️ Clear</button>
+
+<button onclick="speakTraceNumber()">🔊 Listen</button>
+
+<button onclick="nextTraceNumber()">➡ Next</button>
+
+<br><br>
+
+<button onclick="window.location.href='tracing.html'">🏠 Back</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

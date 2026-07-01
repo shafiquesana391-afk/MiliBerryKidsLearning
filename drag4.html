@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Drag Number 5</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.item{
+font-size:80px;
+width:100px;
+margin:30px auto;
+cursor:grab;
+text-align:center;
+}
+
+.box{
+width:150px;
+height:150px;
+border:4px dashed orange;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
+margin:30px auto;
+background:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🔢 Drag Number 5</h1>
+
+<p>Drag Number 5 into the Box</p>
+
+<div id="five"
+class="item"
+draggable="true"
+ondragstart="drag(event)">
+5️⃣
+</div>
+
+<div id="fiveBox"
+class="box"
+ondrop="dropFive(event)"
+ondragover="allowDrop(event)">
+5
+</div>
+
+<h2 id="fiveResult"></h2>
+
+<br>
+
+<button onclick="window.location.href='dragdrop.html'">
+⬅ Back
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

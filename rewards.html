@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rewards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🏆 My Rewards</h1>
+
+<h2>👦 Child: <span id="child"></span></h2>
+
+<h2>⭐ Stars: <span id="stars">0</span></h2>
+
+<h2>🏅 Badges: <span id="badges">0</span></h2>
+
+<h2>💰 Coins: <span id="coins">0</span></h2>
+
+<button onclick="window.location.href='home.html'">
+🏠 Home
+</button>
+
+</div>
+
+<script>
+
+document.getElementById("child").innerHTML =
+localStorage.getItem("childName");
+
+document.getElementById("stars").innerHTML =
+localStorage.getItem("stars") || 0;
+
+document.getElementById("badges").innerHTML =
+localStorage.getItem("badges") || 0;
+
+document.getElementById("coins").innerHTML =
+localStorage.getItem("coins") || 0;
+
+</script>
+
+</body>
+</html>

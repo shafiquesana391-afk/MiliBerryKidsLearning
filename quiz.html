@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>📝 ABC Quiz</h1>
+
+<h2 id="question">🍎 What is this?</h2>
+
+<div id="emoji" style="font-size:120px;">🍎</div>
+
+<button id="btn1" onclick="checkAnswer(1)"></button>
+<button id="btn2" onclick="checkAnswer(2)"></button>
+<button id="btn3" onclick="checkAnswer(3)"></button>
+
+<h2 id="result"></h2>
+
+<h3>⭐ Score: <span id="score">0</span></h3>
+
+<button onclick="window.location.href='home.html'">🏠 Home</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+const quiz=[
+
+{
+emoji:"🍎",
+question:"What is this?",
+options:["Apple","Ball","Cat"],
+answer:0
+},
+
+{
+emoji:"🐱",
+question:"What is this?",
+options:["Dog","Cat","Fish"],
+answer:1
+},
+
+{
+emoji:"🐶",
+question:"What is this?",
+options:["Dog","Lion","Bear"],
+answer:0
+},
+
+{
+emoji:"🍌",
+question:"What is this?",
+options:["Banana","Apple","Orange"],
+answer:0
+},
+
+{
+emoji:"🦁",
+question:"What is this?",
+options:["Tiger","Lion","Cat"],
+answer:1
+}
+
+];
+
+let q=0;
+let score=0;
+
+loadQuestion();
+
+function loadQuestion(){
+
+document.getElementById("emoji").innerHTML=quiz[q].emoji;
+document.getElementById("question").innerHTML=quiz[q].question;
+
+document.getElementById("btn1").innerHTML=quiz[q].options[0];
+document.getElementById("btn2").innerHTML=quiz[q].options[1];
+document.getElementById("btn3").innerHTML=quiz[q].options[2];
+
+document.getElementById("result").innerHTML="";
+
+}
+
+function checkAnswer(choice){
+
+if(choice-1==quiz[q].answer){
+
+score++;
+
+document.getElementById("score").innerHTML=score;
+
+speechSynthesis.speak(new SpeechSynthesisUtterance("Excellent"));
+
+document.getElementById("result").innerHTML="✅ Correct";
+
+}else{
+
+speechSynthesis.speak(new SpeechSynthesisUtterance("Try Again"));
+
+document.getElementById("result").innerHTML="❌ Wrong";
+
+}
+
+setTimeout(function(){
+
+q++;
+
+if(q<quiz.length){
+
+loadQuestion();
+
+}else{
+
+document.querySelector(".home").innerHTML=
+
+"<h1>🎉 Quiz Completed!</h1><h2>Your Score: "+score+"/5 ⭐</h2><br><button onclick='window.location.href=\"home.html\"'>🏠 Home</button>";
+
+}
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>

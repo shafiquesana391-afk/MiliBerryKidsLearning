@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Banana Basket Game</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.item{
+font-size:80px;
+width:100px;
+margin:30px auto;
+cursor:grab;
+text-align:center;
+}
+
+.box{
+width:180px;
+height:180px;
+border:4px dashed brown;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:80px;
+margin:30px auto;
+background:#FFF8DC;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="home">
+
+<h1>🍌 Banana Basket Game</h1>
+
+<p>Drag the Banana into the Basket</p>
+
+<div id="banana"
+class="item"
+draggable="true"
+ondragstart="drag(event)">
+🍌
+</div>
+
+<div id="basket"
+class="box"
+ondrop="dropBanana(event)"
+ondragover="allowDrop(event)">
+🧺
+</div>
+
+<h2 id="bananaResult"></h2>
+
+<br>
+
+<button onclick="window.location.href='

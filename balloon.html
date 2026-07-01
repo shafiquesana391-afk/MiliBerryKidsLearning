@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Balloon Pop Game</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+background:skyblue;
+text-align:center;
+overflow:hidden;
+}
+
+.balloon{
+font-size:70px;
+position:absolute;
+cursor:pointer;
+animation:floatUp 8s linear infinite;
+}
+
+@keyframes floatUp{
+
+0%{
+bottom:-100px;
+}
+
+100%{
+bottom:110%;
+}
+
+}
+
+#score{
+font-size:30px;
+font-weight:bold;
+color:white;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🎈 Balloon Pop Game</h1>
+
+<h2 id="score">⭐ Score: 0</h2>
+
+<div class="balloon" style="left:15%;" onclick="popBalloon(this)">🎈</div>
+
+<div class="balloon" style="left:40%; animation-delay:2s;" onclick="popBalloon(this)">🎈</div>
+
+<div class="balloon" style="left:65%; animation-delay:4s;" onclick="popBalloon(this)">🎈</div>
+
+<div class="balloon" style="left:85%; animation-delay:1s;" onclick="popBalloon(this)">🎈</div>
+
+<br><br>
+
+<button onclick="window.location.href='home.html'">
+🏠 Home
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
