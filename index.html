@@ -13,10 +13,15 @@
 </head>
 
 <body>
-<audio autoplay loop>
+<audio id="bgMusic" loop>
   <source src="background.mp3" type="audio/mpeg">
 </audio>
-<div class="home">
+
+<script>
+window.onload = function () {
+  document.getElementById("bgMusic").play();
+};
+</script>
 
 <h1>🌈 MiliBerry Kids Learning</h1>
 
